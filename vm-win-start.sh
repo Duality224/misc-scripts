@@ -22,7 +22,7 @@ sudo qemu-system-x86_64 \
 	-drive file=/dev/md0,media=disk,format=raw,snapshot=off,cache=none \
 	-pidfile /tmp/qemu-win.pid \
 	-name win \
-	-enable-kvm -cpu host -m 16384 \
+	-enable-kvm -cpu host -m 8192 \
 	-smp 4,sockets=1,cores=4,threads=1 -mem-path /dev/hugepages \
     	-vga qxl -serial mon:stdio \
   	-rtc clock=host,base=localtime \
