@@ -6,7 +6,7 @@ if [ $EUID != 0 ]; then
     exit $?
 fi
 
-#setting up virtual RAID disk if not set up already
+#assembles virtual RAID disk if not set up already
 if ! test -e /dev/md0; then
 sudo losetup -f /path/to/efi1
 sudo losetup -f /path/to/efi2
