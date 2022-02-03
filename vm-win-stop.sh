@@ -6,11 +6,11 @@ if [ $EUID != 0 ]; then
     exit $?
 fi
 
-#stop virtual RAID disk
+#disassembles virtual RAID disk
 sudo mdadm --stop --scan
 sudo losetup --detach-all
 
-#remove temporary pid file
+#removes temporary pid file
 sudo rm /tmp/qemu-win.pid
 
 exit
