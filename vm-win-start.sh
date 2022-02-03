@@ -24,9 +24,10 @@ sudo qemu-system-x86_64 \
 	-name win \
 	-enable-kvm -cpu host -m 16384 \
 	-smp 4,sockets=1,cores=4,threads=1 -mem-path /dev/hugepages \
-    -vga qxl -serial mon:stdio \
-    -rtc clock=host,base=localtime \
-    -device qemu-xhci,id=xhci \
-    -device virtio-tablet,wheel-axis=true \
-    -runas $SUDO_USER \
-    "$@"
+    	-vga qxl -serial mon:stdio \
+  	-rtc clock=host,base=localtime \
+  	-device qemu-xhci,id=xhci \
+    	-device virtio-tablet,wheel-axis=true \
+	-soundhw hda \
+    	-runas $SUDO_USER \
+    	"$@"
