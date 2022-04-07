@@ -14,7 +14,7 @@ apt-get upgrade -y
 flatpak update
 
 #updating proton-ge with protonup
-~/.local/bin/protonup -y
+/home/USER/.local/bin/protonup -y
 
 #updating Steven Black's hosts file
 cd /path/to/StevenBlack-hosts
