@@ -10,3 +10,5 @@ rpcs3-steam.sh - runs through Steam to boot the RPCS3 emulator from your Steam l
 sound-off.sh & sound-on.sh - mutes and unmutes the system via amixer. These scripts can be added to crontab to do this automatically at specified times if the variable XDG_RUNTIME_DIR=/run/user/1000 is added immediately above each script entry.
 
 vm-win-start.sh & vm-win-stop.sh - assembles and disassembles virtual RAID disk for a Windows VM booted from a physical disk, and in the case of the former script also boots the VM itself. VM created in accordance with the steps shown at https://lejenome.tik.tn/post/boot-physical-windows-inside-qemu-guest-machine.
+
+updater.sh - non-interactively updates apt and flatpak packages as well as proton-ge (via protonup) and Steven Black's hosts file.
