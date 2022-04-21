@@ -11,4 +11,4 @@ sound-off.sh & sound-on.sh - mutes and unmutes the system via amixer. These scri
 
 vm-win-start.sh & vm-win-stop.sh - assembles and disassembles virtual RAID disk for a Windows VM booted from a physical disk, and in the case of the former script also boots the VM itself. VM created in accordance with the steps shown at https://lejenome.tik.tn/post/boot-physical-windows-inside-qemu-guest-machine.
 
-updater.sh - non-interactively updates apt and flatpak packages as well as proton-ge (via protonup) and Steven Black's hosts file.
+updater.sh - non-interactively updates apt and flatpak packages, firmware via fwupdmgr, and Steven Black's hosts file. It also notifies when a reboot is required.
