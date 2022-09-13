@@ -22,10 +22,9 @@ fwupdmgr update
 cd /path/to/StevenBlack-hosts
 python3 ./updateHostsFile.py --auto --replace --output /etc --flush-dns-cache --skipstatichosts --nogendata --blacklist ./blacklist --whitelist ./whitelist
 
-#checking if reboot required and exiting on enter keypress
+#checking if reboot required and exiting on any keypress
 if [ -f /run/reboot-required ]; then
-    echo "System updated. Please reboot."
+    read -sn 1 -p "System updated. Please reboot."
 else   
-    echo "No reboot required. Updated and ready to go!"
+    read -sn 1 -p "No reboot required. Updated and ready to go!"
 fi
-read && exit
