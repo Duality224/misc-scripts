@@ -11,4 +11,6 @@ sound-off.sh & sound-on.sh - mutes and unmutes the system via amixer. These scri
 
 vm-win-start.sh & vm-win-stop.sh - assembles and disassembles virtual RAID disk for a Windows VM booted from a physical disk, and in the case of the former script also boots the VM itself. VM created in accordance with the steps shown at https://lejenome.tik.tn/post/boot-physical-windows-inside-qemu-guest-machine.
 
+home-backup.sh - backs up home directory to a separate drive using rsync, excluding directories and files specified in a separate 'rsync-exclusions' file. Uses arguments which prompt rsync to back up over any previous folders in the target location, overwriting any existing files and directory structures less up to date than those currently in the home directory (resulting in a single archive which is successively overwritten with each new backup).
+
 updater.sh - non-interactively updates apt and flatpak packages, firmware via fwupdmgr, and Steven Black's hosts file. It also notifies when a reboot is required.
