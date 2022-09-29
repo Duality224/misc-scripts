@@ -1,9 +1,0 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Name=System Backup
-Comment=Backs up home folder to external backup drive
-Exec=/home/me/Documents/Scripts/home-backup.sh
-Terminal=true
-Type=Application
-Categories=Application
-Icon=/home/me/Documents/Scripts/Icons/system-backup.png
