@@ -13,4 +13,4 @@ vm-win-start.sh & vm-win-stop.sh - assembles and disassembles virtual RAID disk 
 
 home-backup.sh - backs up home directory to a separate drive using rsync, excluding directories and files specified in a separate 'rsync-exclusions' file. Uses arguments which prompt rsync to back up over any previous folders in the target location, overwriting any existing files and directory structures less up to date than those currently in the home directory (resulting in a single archive which is successively overwritten with each new backup).
 
-updater.sh - non-interactively updates apt, flatpak and pip packages, firmware via fwupdmgr, and Steven Black's hosts file. It also notifies when a reboot is required.
+updater.sh - non-interactively updates apt, flatpak and pip packages (disabling keyring for the latter), firmware via fwupdmgr, and Steven Black's hosts file. It also notifies when a reboot is required.
