@@ -14,6 +14,10 @@ apt-get autoclean
 #updating flatpak packages
 flatpak update -y
 
+#updating specified python packages
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+pip install --upgrade konsave sgt-launcher youtube_dl
+
 #updating fwupdmgr firmware
 fwupdmgr refresh
 fwupdmgr update
