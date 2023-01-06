@@ -19,7 +19,7 @@ export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
 pip install --upgrade konsave sgt-launcher youtube_dl
 
 #updating Rust
-rustup update
+sudo -u USERNAME /home/USER/.cargo/bin/rustup update
 
 #updating fwupdmgr firmware
 fwupdmgr refresh
