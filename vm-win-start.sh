@@ -29,5 +29,5 @@ sudo qemu-system-x86_64 \
   	-device qemu-xhci,id=xhci \
     	-device virtio-tablet,wheel-axis=true \
 	-soundhw hda \
-    	-runas $SUDO_USER \
+    	-runas "$SUDO_USER" \
     	"$@"
