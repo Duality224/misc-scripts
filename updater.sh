@@ -31,7 +31,7 @@ python3 ./updateHostsFile.py --auto --replace --output /etc --flush-dns-cache --
 
 #checking if reboot required and exiting on any keypress
 if [ -f /run/reboot-required ]; then
-    read -sn 1 -p "System updated. Please reboot."
+    read -rsn 1 -p "System updated. Please reboot."
 else   
-    read -sn 1 -p "No reboot required. Updated and ready to go!"
+    read -rsn 1 -p "No reboot required. Updated and ready to go!"
 fi
