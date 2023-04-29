@@ -21,6 +21,12 @@ pip install --upgrade konsave sgt-launcher youtube_dl
 #updating Rust
 sudo -u USERNAME /home/USER/.cargo/bin/rustup update
 
+#updating tldr
+sudo -u USERNAME /home/USER/.cargo/bin/tldr --update
+
+#updating linux-purge
+sudo update-linux-purge
+
 #updating fwupdmgr firmware
 fwupdmgr refresh
 fwupdmgr update
