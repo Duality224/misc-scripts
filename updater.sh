@@ -27,6 +27,9 @@ sudo -u USERNAME /home/USER/.cargo/bin/tldr --update
 #updating linux-purge
 sudo update-linux-purge
 
+#updating yt-dlp
+sudo yt-dlp -U
+
 #updating fwupdmgr firmware
 fwupdmgr refresh
 fwupdmgr update
