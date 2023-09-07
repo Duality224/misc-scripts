@@ -16,7 +16,7 @@ flatpak update -y
 
 #updating specified python packages
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
-pip install --upgrade konsave sgt-launcher youtube_dl
+pip install -U konsave sgt-launcher
 
 #updating Rust
 sudo -u USERNAME /home/USER/.cargo/bin/rustup update
