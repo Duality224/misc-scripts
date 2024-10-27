@@ -6,41 +6,44 @@ if [ $EUID != 0 ]; then
     exit $?
 fi
 
-#updating apt packages
-apt-get update -y
-apt-get upgrade -y
-apt-get autoclean
+#updating system and packages
+rpm-ostree upgrade
+#rpm-ostree ex apply-live
 
 #updating flatpak packages
 flatpak update -y
 
-#updating specified python packages
-export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
-pip install -U konsave sgt-launcher
-
-#updating Rust
+#updating rust
 sudo -u USERNAME /home/USER/.cargo/bin/rustup update
 
 #updating tldr
 sudo -u USERNAME /home/USER/.cargo/bin/tldr --update
 
-#updating linux-purge
-sudo update-linux-purge
+#updating starship
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 #updating yt-dlp
-sudo yt-dlp -U
+/path/to/yt-dlp -U
+
+#updating specified python packages in python venv
+. /home/path/to/python-venv/bin/activate
+pip install -U pip podman-compose
+deactivate
 
 #updating fwupdmgr firmware
-fwupdmgr refresh
-fwupdmgr update
+#fwupdmgr refresh
+#fwupdmgr update
 
 #updating Steven Black's hosts file
-cd /path/to/StevenBlack-hosts
+cd /path/to/StevenBlack-hosts || exit
 python3 ./updateHostsFile.py --auto --replace --output /etc --flush-dns-cache --skipstatichosts --nogendata --blacklist ./blacklist --whitelist ./whitelist
 
 #checking if reboot required and exiting on any keypress
-if [ -f /run/reboot-required ]; then
-    read -rsn 1 -p "System updated. Please reboot."
-else   
-    read -rsn 1 -p "No reboot required. Updated and ready to go!"
-fi
+#if [ -f /run/reboot-required ]; then
+#    read -rsn 1 -p "System updated. Please reboot."
+#else   
+#    read -rsn 1 -p "No reboot required. Updated and ready to go!"
+#fi
+
+#update confirmation
+read -rsn 1 -p "System successfully updated!"
