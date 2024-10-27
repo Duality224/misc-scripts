@@ -1,5 +1,5 @@
 # misc-scripts
-A collection of shell scripts I use to automate miscellaneous tasks in Kubuntu.
+A collection of shell scripts I use to automate miscellaneous tasks in Fedora Kinoite (or used in previous Linux installations).
 
 ---
 
@@ -13,6 +13,8 @@ vm-win-start.sh & vm-win-stop.sh - assembles and disassembles virtual RAID disk 
 
 home-backup.sh - mounts backup drive, backs up home directory to backup drive using rsync (excluding directories and files specified in a separate 'rsync-exclusions' file), and unmounts backup drive on completion. Uses arguments which prompt rsync to back up over any previous folders in the target location, overwriting any existing files and directory structures less up to date than those currently in the home directory (resulting in a single archive which is successively overwritten with each new backup).
 
-updater.sh - non-interactively updates apt, flatpak and pip packages (disabling keyring for the latter), Rust, tldr, linux-purge, yt-dlp, firmware via fwupdmgr, and Steven Black's hosts file. It also notifies when a reboot is required.
+updater.sh - non-interactively updates rpm-ostree, flatpak and pip packages, Rust, tldr, linux-purge, yt-dlp, and Steven Black's hosts file.
 
 minecraft-launcher.sh - searches PrismLauncher instances folder for the latest installed version of Minecraft (sorted alphabetically) and launches this instance with PrismLauncher.
+
+autostart.sh - allows automatic startup of applications on login if run as a login script. Minimises applications following startup and moves them to preferred displays using kdotool (requires configuration to match display setup).
