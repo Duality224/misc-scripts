@@ -13,7 +13,7 @@ vm-win-start.sh & vm-win-stop.sh - assembles and disassembles virtual RAID disk 
 
 home-backup.sh - mounts backup drive, backs up home directory to backup drive using rsync (excluding directories and files specified in a separate 'rsync-exclusions' file), and unmounts backup drive on completion. Uses arguments which prompt rsync to back up over any previous folders in the target location, overwriting any existing files and directory structures less up to date than those currently in the home directory (resulting in a single archive which is successively overwritten with each new backup).
 
-updater.sh - non-interactively updates rpm-ostree, flatpak and pip packages, Rust, tldr, linux-purge, yt-dlp, and Steven Black's hosts file.
+updater.sh - non-interactively updates rpm-ostree, flatpak and pip packages, Rust, tldr, linux-purge, yt-dlp, and Steven Black's hosts file, then prompts to shut down.
 
 minecraft-launcher.sh - searches PrismLauncher instances folder for the latest installed version of Minecraft (sorted alphabetically) and launches this instance with PrismLauncher.
 
