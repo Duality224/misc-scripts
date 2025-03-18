@@ -46,4 +46,10 @@ python3 ./updateHostsFile.py --auto --replace --output /etc --flush-dns-cache --
 #fi
 
 #update confirmation
-read -rsn 1 -p "System successfully updated!"
+printf "System successfully updated!\nPress S to shut down, or any other key to quit."
+read -rsn1 input
+if [ "$input" = "s" ]; then
+systemctl poweroff
+else
+exit
+fi
